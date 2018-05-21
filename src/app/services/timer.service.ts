@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class TimerService {
 
   private countdownTimerRef: any = null;
-  private paused = false;
+  public paused = false;
   private init = 0;
 
   private countdownEndSource = new Subject<void>();
