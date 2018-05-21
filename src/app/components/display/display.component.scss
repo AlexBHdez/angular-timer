@@ -1,5 +1,5 @@
 :host {
-  font-size: 25vh;
+  font-size: 25vw;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 700;
   line-height: 0.2;
@@ -9,4 +9,10 @@
     font-weight: 400;
   }
 
+}
+
+@media (min-width: 1300px) {
+  :host {
+    font-size: 320px;
+  }
 }

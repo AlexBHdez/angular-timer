@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class TimerComponent implements OnInit, OnDestroy {
 
-  @Input() init = 20;
+  @Input() init = 0;
   @Output() whenComplete = new EventEmitter<void>();
   private countdownEndSubscription: Subscription = null;
   private countdownSubscription: Subscription = null;
@@ -40,5 +40,14 @@ export class TimerComponent implements OnInit, OnDestroy {
     this.countdownSubscription.unsubscribe();
   }
 
+  setTimer(event) {
+    const time = parseInt(event.target.value, 2);
+    if (isNaN(time)) {
+      this.init = 0;
+    } else {
+      this.init = event.target.value;
+      this.timerService.setTimer(event.target.value);
+    }
+  }
 
 }

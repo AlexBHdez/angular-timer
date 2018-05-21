@@ -20,15 +20,14 @@ export class TimerService {
     this.clearTimeout();
   }
 
-  restartCountdown(init?) {
-    // tslint:disable-next-line:curly
-    if (init)
-      this.init = init;
-      if (this.init && this.init > 0) {
-        this.paused = false;
-        this.clearTimeout();
-        this.countdownSource.next(this.init);
-      }
+  setTimer(time) {
+    this.countdownSource.next(time);
+  }
+
+  restartCountdown(time) {
+    this.paused = false;
+    this.clearTimeout();
+    this.countdownSource.next(time);
   }
 
   toggleCountdown() {

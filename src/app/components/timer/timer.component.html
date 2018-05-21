@@ -5,7 +5,12 @@
   <div class="buttons">
     <button *ngIf="!timerService.paused" (click)="timerService.toggleCountdown()" class="start">START</button>
     <button *ngIf="timerService.paused" (click)="timerService.toggleCountdown()" class="pause">PAUSE</button>
-    <button (click)="timerService.restartCountdown()" class="restart">RESTART</button>
+    <button (click)="timerService.restartCountdown(time.value)" class="restart">RESTART</button>
+  </div>
+
+  <div class="timePicker">
+    <input type="text" pattern="[0-9]" class="timeByUser" (keyup)="setTimer($event)" #time placeholder="seconds">
+    <p class="timeInfo">Just write your time in seconds and play.</p>
   </div>
 </div>
 
