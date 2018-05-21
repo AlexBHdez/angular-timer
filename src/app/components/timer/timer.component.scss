@@ -1,0 +1,12 @@
+.timer {
+  position: fixed;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+
+  .buttons {
+    position: absolute;
+    width: 100%;
+    top: 250px;
+  }
+}
