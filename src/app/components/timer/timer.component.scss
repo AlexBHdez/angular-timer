@@ -125,16 +125,23 @@ $base:#d6d5b3;
 @media (max-height: 680px) {
   .timer {
     top: 25%;
+    
+    .timePicker {
+      margin-top: 100px;
+    }
+
   }
+
 }
 
 @media (max-height: 500px) {
   .timer {
     top: 15%;
-    
+
     .timePicker {
-      margin-top: 50px;
+      margin-top: 80px;
     }
+
   }
 
 }
