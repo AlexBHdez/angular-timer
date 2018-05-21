@@ -10,9 +10,7 @@ $base:#d6d5b3;
   text-align: center;
 
   .buttons {
-    position: absolute;
     width: 100%;
-    top: 350px;
     
     button {
       cursor: pointer;
@@ -96,10 +94,9 @@ $base:#d6d5b3;
   }
 
   .timePicker {
-    position: absolute;
-    top: 200px;
     text-align: center;
     width: 100%;
+    margin-top: 150px;
 
     .timeByUser {
       font-size: 10px;
@@ -123,4 +120,21 @@ $base:#d6d5b3;
       font-weight: 400;
     }
   }
+}
+
+@media (max-height: 680px) {
+  .timer {
+    top: 25%;
+  }
+}
+
+@media (max-height: 500px) {
+  .timer {
+    top: 15%;
+    
+    .timePicker {
+      margin-top: 50px;
+    }
+  }
+
 }
