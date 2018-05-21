@@ -1,3 +1,9 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html, body, .h100 {
   height: 100%;
 }
@@ -8,5 +14,11 @@ body {
 
 .bgColor {
   background-color: #7eb77f;
+}
+
+button {
+  border: 0;
+  padding: 10px 30px;
+  margin: 0;
 }
 

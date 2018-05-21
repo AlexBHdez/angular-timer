@@ -3,9 +3,9 @@
   <app-display [time]="countdown"></app-display>
   
   <div class="buttons">
-    <button *ngIf="!timerService.paused" (click)="timerService.toggleCountdown()">START</button>
-    <button *ngIf="timerService.paused" (click)="timerService.toggleCountdown()">PAUSE</button>
-    <button (click)="timerService.restartCountdown()">RESTART</button>
+    <button *ngIf="!timerService.paused" (click)="timerService.toggleCountdown()" class="start">START</button>
+    <button *ngIf="timerService.paused" (click)="timerService.toggleCountdown()" class="pause">PAUSE</button>
+    <button (click)="timerService.restartCountdown()" class="restart">RESTART</button>
   </div>
 </div>
 
